@@ -1,6 +1,0 @@
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/vivado-workspace/lab01/lab01.srcs/sources_1/new/fullAdder.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module fullAdder
-WARNING: [VRFC 10-9336] redeclaration of ANSI port 'cout' is not allowed [D:/vivado-workspace/lab01/lab01.srcs/sources_1/new/fullAdder.v:31]
-WARNING: [VRFC 10-9336] redeclaration of ANSI port 's' is not allowed [D:/vivado-workspace/lab01/lab01.srcs/sources_1/new/fullAdder.v:32]
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/vivado-workspace/lab01/lab01.srcs/sim_1/new/tester.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module tester
