@@ -32,7 +32,8 @@ module Debouncer(
     Dflipflop DFF2(Q2, notQ2, Q1, clk);
 
     always @(posedge clk) begin
-        if (Q1 == Q2) signal_out <= Q2;
+        if (Q1 == Q2) 
+            signal_out <= Q2;
     end
     
 endmodule
