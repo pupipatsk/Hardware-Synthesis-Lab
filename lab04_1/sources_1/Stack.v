@@ -38,18 +38,17 @@ module Stack(
     end
     
     always @(posedge clk) begin
-        if (push) begin
-            mem[addr] = din;
-            addr = addr + 1;
+        if (reset) begin
+            addr <= 0;
+            dout <= 0;
         end
-        else if (pop) begin
-            dout = mem[addr];
-            mem[addr] = 0;
-            addr = addr - 1;
+        else if (push && (addr < 255)) begin
+            addr <= addr + 1;
+            mem[addr] <= din;
         end
-        else if (reset) begin
-            dout = 0;
-            addr = 0;
+        else if (pop && (addr > 0)) begin
+            dout <= mem[addr];
+            addr <= addr - 1;
         end
     end
     

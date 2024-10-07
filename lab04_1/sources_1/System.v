@@ -32,6 +32,10 @@ module System(
         DebounceSinglePulse dbspSW(switches[n], sw[n], newClk);
     end endgenerate
     
+    // Stack
+    wire [3:0] num3, num2, num1, num0; 
+    Stack stack({num3,num2}, {num1,num0}, switches, push, pop, reset, NewClk);
+    
     // Dislay
     QuadSevenSegmentDisplay display(seg, dp, an, num3, num2, num1, num0, newClk);
 
