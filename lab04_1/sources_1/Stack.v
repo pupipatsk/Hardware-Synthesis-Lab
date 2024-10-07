@@ -42,12 +42,13 @@ module Stack(
             addr <= 0;
             dout <= 0;
         end
-        else if (push && (addr < 255)) begin
+        if (push && (addr < 255)) begin
             addr <= addr + 1;
             mem[addr] <= din;
         end
-        else if (pop && (addr > 0)) begin
+        if (pop && (addr > 0)) begin
             dout <= mem[addr];
+            mem[addr] <= 0;
             addr <= addr - 1;
         end
     end
