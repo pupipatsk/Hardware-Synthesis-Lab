@@ -10,11 +10,11 @@ module SyncROM(
     input wire [4:0] addr, // Input Address 5-bits
     input clk
     );
-    
+
     (* rom_style = "block" *) reg[7:0] mem[31:0]; // 32 loc * 8 bits
     initial $readmemb("rom.mem", mem);
     always @(posedge clk) begin
         data_out <= mem[addr];
     end
-    
+
 endmodule
