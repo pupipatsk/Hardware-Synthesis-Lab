@@ -13,7 +13,7 @@ output reg Cout;
 input [31:0] A;
 input [31:0] B;
 input Cin;
-input [1:0] alu_ops;
+	input [2:0] alu_ops;
 
 assign z=~|S;
 
