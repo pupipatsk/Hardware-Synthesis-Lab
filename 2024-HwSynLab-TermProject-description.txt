@@ -1,0 +1,35 @@
+2024-HwSynLab-TermProject
+
+Hardware Synthesis, Term Project
+Objectives
+
+Design a simple computer terminal.
+Background
+A computer terminal[1]  is a simple form of computer interface. Initially, it is a form of  keyboard and typewriter connecting through a telephone line (aka. USART) — hence the name TeleType. It can be designed using either a pure state machine or a CPU.
+
+Requirements
+In this project, you are asked to design a simple billboard system in FPGA. The interface is your VGA, and a USART input. Your device will function as both receiver/display and sender at the same time.
+
+As a receiver, your device will accept an input from USART and display the character to the VGA display. For each character received, show a letter for one second. The display must be capable of displaying  alphanumeric characters (ASCII). At minimum, the characters are A-Z, a-z, 0-9 and new line (‘\n’). Other non-supported characters may show as ‘-’.
+As a sender Use 8 switches as an input with one push button as a send command to send an 8-bit data through serial communication.
+Optional (bonus), support keyboard input. For each character pressed on the keyboard, send an 8-bit data through serial communication.
+
+
+Your system must support:
+
+At least 320x240 display through VGA port through memory mapped display. There is no need to show colors. B/W is acceptable. Display a line with 8 characters per line to the VGA screen.
+A USART  Interface (8n1, 9600bps)
+Reset switch
+8-bit input (using 8 switches) and one send button (using a push button)
+(Optional) PS/2 keyboard as an input
+
+Grading
+Given that this is a challenged task, even if you cannot deliver the fully function game, you can still get a partial credits as following:
+
+(10 points) show (atleast)  an 8-character line on the VGA screen.
+(10 points) the 8-bit data can be received and sent. (You may use the 7-segment displays to show that your data has correctly been sent/received— 2 digits for each direction.)
+(10 points) Support for PS/2 (aka. USB) keyboard.
+(10 points) A 1 page (A4) poster/summary shows proper/modular design of the system (display module, Serial, keyboard module, CPU if used)
+Bonus. (20 points) support Thai character.
+Bonus. (5 points) graphic design of your screen.
+Bonus. (5 points) support multiple lines.
